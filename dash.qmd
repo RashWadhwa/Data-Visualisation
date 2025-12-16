@@ -1,0 +1,47 @@
+---
+title: "My first Quarto Dashboard"
+subtitle: "Data visualisation"
+author: "RP Wadhwa"
+format: dashboard
+
+execute:
+  echo: false
+  warning: false
+  message: false
+code-overflow: wrap
+
+date: "2025-12-16"
+---
+
+## Row {height="60%"}
+
+### This is an example of interactive plot, using plotly library.
+
+```{r}
+# eval: false
+library(plotly)
+plot_ly(mtcars, x = ~hp, y = ~mpg, color = ~factor(cyl), 
+        type = 'scatter', mode = 'markers') %>%
+  layout(title = "Horsepower vs MPG (Interactive)")
+```
+
+
+## row {height="40%"}
+```{r}
+#| echo: false
+library(ggplot2)
+ggplot(economics, aes(date, unemploy)) + geom_line(color = "steelblue") + theme_minimal() + labs(title = "Unemployment Over Time")
+```
+
+::: columns
+::: {.column width="50%"}
+#### This is an example of histogram, using ggplot2 library.
+```{r}
+library(ggplot2)
+ggplot(mtcars, aes(x = mpg)) +
+  geom_histogram(binwidth = 2, fill = "skyblue", color = "white") +
+  theme_minimal() +
+  labs(title = "MPG Distribution")
+```
+
+:::

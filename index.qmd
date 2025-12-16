@@ -1,0 +1,17 @@
+---
+title: "Homepage"
+subtitle: "Data Visualisation"
+author: "R P Wadhwa"
+format: 
+  html:
+  toc: true
+  toc-depth: 3
+  theme: cosmo
+  number-sections: true
+---
+
+# Welcome to my Website.
+
+# Introduction
+
+## This is my first Quarto project demonstrating multiple visuals using several libraries such as tidyverse, plotly, and ggplot2.

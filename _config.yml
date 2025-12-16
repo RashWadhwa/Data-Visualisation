@@ -1,0 +1,51 @@
+title: "Quarto Dashboards"
+subtitle: "Data visualisation"
+author: "R P Wadhwa"
+project:
+  type: website
+
+format:
+  html:
+    theme: pulse
+    toc: true
+
+execute:
+  echo: true
+  warning: false
+  message: false
+
+website:
+  title: "My Quarto Site"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Homepage
+      - href: slides.qmd
+        text: Presentation
+      - href: dash.qmd
+        text: Dashboard
+      
+      
+
+    
+    
+    
+    
+    
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
