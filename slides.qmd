@@ -1,5 +1,5 @@
 ---
-title: "Demonstrating multiple examples using slide format"
+title: "Demonstrating multiple examples using slides format"
 subtitle: "Data Visualisation"
 author: "R P Wadhwa"
 format: 

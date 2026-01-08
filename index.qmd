@@ -2,16 +2,236 @@
 title: "Homepage"
 subtitle: "Data Visualisation"
 author: "R P Wadhwa"
-format: 
-  html:
-  toc: true
-  toc-depth: 3
-  theme: cosmo
-  number-sections: true
+format: html
+toc: true
+toc-depth: 3
+theme: cosmo
 ---
 
 # Welcome to my Website.
 
-# Introduction
+## Introduction
 
-## This is my first Quarto project demonstrating multiple visuals using several libraries such as tidyverse, plotly, and ggplot2.
+Data visualisation is an important skill for any data professional. It is important to understand the difference between a graph and a graphic before planning any visuals. A graph is a mathematical representation of a set of points and their relationships. A graphic is its perceivable representation. This website demonstrates key concepts of the Grammar of Graphics and Object-Oriented Design, providing examples and explaining why these concepts are important.
+
+## Task 1 - Planning a Graphic
+
+Before writing any code, it's essential to plan exactly what the final graphic should look like and how it will communicate the data. This structured plan is referred to as a Specification (SPEC). The core idea is to separate the design (the SPEC) from the execution (the R code).
+
+**Why is separating specification from execution important?**
+
+This separation is key to reproducibility and flexibility. If I write a clear SPEC, anyone—myself in five years, another student, or even someone using Python's plotnine (a Grammar of Graphics implementation)—can reproduce the same visual. **The SPEC describes the what, while the code describes the how.**
+
+**Components of a Good Graphic Plan, or in other words, the six specification statements.**
+
+A good SPEC breaks down the graphic into the core components of the Grammar of Graphics:
+
+1.  **Data:** The dataset to be used and any necessary preprocessing, such as creating/choosing variables.
+2.  **Trans/Aesthetics (Aesthetics Mapping):** Which data variables are mapped to which visual properties (colour, position, size).
+3.  **Element/Geometry:** Graphical elements/statistics used to represent the data (points, lines, bars, etc.).
+4.  **Scales:** How the raw data values are translated into aesthetic values (e.g., how the range of income values maps to a range of colour lightness).
+5.  **Coordinates:** It refers to organising the view (e.g., Cartesian, polar, map projections).
+6.  **Guides:** It refers to axes, legends, titles, and reference forms.
+
+**Example SPEC: Visualising Car Efficiency**
+
+**Goal:** To create a scatter plot that shows the relationship between engine displacement and highway fuel efficiency (hwy), with points coloured by the number of cylinders.
+
+| Component | Specification (SPEC) | Code Element |
+|------------------------|------------------------|------------------------|
+| **Data** | ggplot2::mpg dataset | ggplot(mpg, ...) |
+| **Trans/Aesthetics** | X-axis displ(Engine displacement in Litres, Y-axis hwy(Highway Miles per Gallon), Colour cyl(Number of Cylinders) | aes(x = displ, y = hwy, color = factor(cyl)) |
+| **Element/Geometry** | Points (Scatter Plot) | geom_point() |
+| **Scales** | X-axis | scale_x_continuous |
+|  | Colour: Use a discrete, colour-blind–friendly-palette | scale_color_brewer(palette = "Set1") |
+| **Coordinates** | Cartesian (X-Y) | coord_cartesian() |
+| **Guides** | Title: "Engine Size vs Fuel Efficiency" | labs(title = "") |
+|  | Theme: Minimal appearance | theme_minimal() |
+
+```{r}
+library(ggplot2)
+
+ggplot(data = mpg, 
+       mapping = aes(x = displ, 
+                     y = hwy, 
+                     color = factor(cyl))) + 
+  geom_point() +                             
+  scale_x_continuous() +                     
+  scale_color_brewer(palette = "Set1") +     
+  coord_cartesian() +                        
+  labs(
+    title = "Engine Size vs Fuel Efficiency", 
+    x = "Engine Displacement (Liters)",
+    y = "Highway Miles per Gallon",
+    color = "Cylinders"
+  ) +
+  theme_minimal()   
+```
+
+## Task 2 – Explaining the Grammar of Graphics
+
+The **Grammar of Graphics** It is a foundational set of rules for constructing systematic and reproducible visualisations in R, primarily through the ggplot2 library. Much like the syntax of a spoken language—where a specific order of subject, verb, and object ensures clarity—this framework requires that each component of a graphic be declared in a logical sequence to produce the intended output.
+
+**Data and Aesthetics (aes()):** The process begins with the raw data, followed by the declaration of aesthetics. Aesthetics serve as the instructions for what variables to map to the graph, such as $x$ and $y$ coordinates, colors, and shapes. Crucially, aes() does not render the graph itself; it merely defines the mapping between data and visual properties. E.g. aes(x = weight, y = height, color = "Green")
+
+**Scales and Transformations:** These determine how data values are mapped to the visual space. While an IDE may provide default scaling, manual manipulation of scales is essential for telling complex stories and ensuring the data is positioned accurately. For example, using log_10 to handle skewed data, such as scale_y_log10() or scale_color_discrete().
+
+**Geometries (geom):** Geometries define the physical representation of the data, such as bar charts, histograms, or scatter plots. Selecting the appropriate geometry is vital for accurate data representation.They represent the data. For example, geom_point(), geom_line(), geom_boxplot(), geom_smooth().  
+
+**Statistical Elements:** It refers to the functions that perform statistical transformations on the data before drawing the geometry (e.g., calculating means, binning, smoothing).
+
+**Coordinates:** This layer pinpoints exactly where data is positioned. While aesthetics handle the "look" of the data, coordinates define the physical space it occupies. Precision here is a matter of ethics; manipulating coordinates can lead to misleading visualisations if not handled carefully. By default, it is standard Cartesian. However, there are others which change the visual interpretation, such as coord_polar() or coord_flip().
+
+**Guides and Facets:** Guides are visual aids like axes, ticks, and legends. On the other hand, Facets are a powerful way to create multiple small plots, breaking a single plot into many subplots based on a categorical variable.
+
+**Combining the Components:** The beauty of the Grammar is that we combine these elements using the + symbol in ggplot2. We start with the **Data**, map the **Aesthetics**, select a **Geometry** to represent the data, and then fine-tune the view with **Scales, Coordinates, and Guides**. This step-by-step layering allows us to build any graphic imaginable.
+
+Here are some of the code with examples, which demonstrate how I integrated the SPEC of Grammar of Graphics in these visuals.
+
+```{r}
+# Violin + Boxplot combination
+  ggplot(iris, aes(x = Species, y = Sepal.Length,fill=Species)) +
+    geom_violin(alpha = 0.4, trim = FALSE) +
+    geom_boxplot(alpha = 0.35, width = 0.2) +
+    labs(
+      title = "Violin + Boxplot combination",
+      x = "Species",
+      y = "Sepal Length",
+      fill = "Species"
+    )
+```
+```{r}
+#Small-Multiple time series
+  # facet_grid() can have more than 1 variables.
+  ggplot(iris, aes(x = Petal.Width, y = Petal.Length,fill=Species)) +
+    geom_point() +
+    facet_wrap(~Species) +
+    labs(
+      title = "petals",
+      x = "petal length stuff",
+      fill = "Orange"
+    )
+  
+```
+```{r}
+ # Styled boxplot
+ggplot(mpg, aes(x = class, y = hwy, fill = class)) +
+  geom_boxplot(alpha = 0.4,) +
+  scale_fill_brewer(palette ='Set3')+
+  # theme(legend.background = 'Grey')+
+  theme(legend.position = 'top' )
+
+```
+```{r}
+library(ggplot2)
+data(iris)
+
+ggplot(iris, aes(x = Sepal.Width, fill = Species)) +
+  geom_density(alpha = 0.35) + 
+  labs(
+    title="Sepal length distribution by species",
+      x = "Sepal length(cm)",
+      y = "Density",
+    fill = "Species"
+      )
+ggplot(mpg, aes(x = class, fill = drv)) +
+  geom_bar(position = 'dodge') +
+  labs (x = "Class", y = "Count")+
+  theme_classic()
+```
+
+
+```{r}
+library(ggplot2)
+data(iris)
+
+ggplot(iris, aes(x = Sepal.Width, fill = Species)) +
+  geom_density(alpha = 0.35) + 
+  labs(
+    title="Sepal length distribution by species",
+      x = "Sepal length(cm)",
+      y = "Density",
+    fill = "Species"
+      )
+```
+```{r}
+library(ggplot2)
+data(economics)
+
+#economics%>%
+  ggplot(economics, aes(x = date, y = unemploy)) +
+    geom_line(
+      linejoin = "round",
+      lineend = "butt",
+      linemitre = 10,
+    ) +
+    geom_smooth(color = "Green", span=0.1)
+      
+  labs(
+    title = "Unemployment with smooth trend",
+    x = "Year",
+    y = "Number unemployed",
+    fill = "uempmed"
+  )
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
