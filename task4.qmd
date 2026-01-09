@@ -4,9 +4,9 @@
 
 Below is the animated visualisation of the UK's development trajectory, highlighting the impact of the 2020 COVID-19 pandemic.
 
-{{< video videos/gapminder_uk_covid_reflection.gif >}}" >}}
+{{< video videos/gapminder_uk_covid_reflection.gif >}}
 
-### Reflective Commentary
+Reflective Commentary
 
 # The Value of Animation in Data Storytelling (Holtz, 2018)
 
