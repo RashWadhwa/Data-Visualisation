@@ -1,13 +1,12 @@
 project:
   type: website
   output-dir: docs
-
+  
+author: "RP Wadhwa"
 website:
   title: "Data Visualization Portfolio"
-  description: "A comprehensive guide to the Grammar of Graphics in R."
-  author: "R P Wadhwa"
   navbar:
-    backgroud: primary
+    background: primary
     left:
       - href: index.qmd
         text: Homepage
@@ -29,27 +28,3 @@ execute:
   echo: true
   warning: false
   message: false
-      
-
-    
-    
-    
-    
-    
-    
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
