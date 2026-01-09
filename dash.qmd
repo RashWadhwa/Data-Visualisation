@@ -49,7 +49,7 @@ list(
 ## row {height="60%"}
 
 ```{r}
-#| title: Interactive Exploration: Horsepower vs MPG
+#| title: "Interactive Exploration: Horsepower vs MPG"
 library(plotly)
 plot_ly(mtcars, x = ~hp, y = ~mpg, color = ~factor(cyl), 
         type = 'scatter', mode = 'markers') %>%
@@ -74,7 +74,7 @@ ggplot(mtcars, aes(x = mpg)) +
 # University Map {orientation="rows" scrolling="true"}
 
 ```{r}
-#| title: Campus Location"
+#| title: "Campus Location"
 library(leaflet)
 
 leaflet() |>
