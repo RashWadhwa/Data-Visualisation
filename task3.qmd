@@ -1,0 +1,169 @@
+---
+title: Complex Graphics
+subtitle: "Data Visualisation"
+author: "R P Wadhwa"
+format: html
+toc: true
+toc-depth: 3
+theme: cosmo
+---
+
+# Task3
+
+## I have used the built-in air quality dataset, which records daily air quality measurement in New Your to visualise the relationship between Wind Speed, Temperature, and Ozone levels across the five months of the study.
+
+### The following code creates a multi-layered graphic using multiple aesthetics, color, and faceting with annotations (Hadley Wickham, 2019).
+
+```{r}
+library(ggplot2)
+library(dplyr)
+
+# Cleaned the data first by removing NAs
+air_clean <- na.omit(airquality)
+
+# Converted Month to a factor for proper ordering and labeling
+month_labels <- c("May", "June", "July", "August", "September")
+air_clean <- air_clean %>%
+  mutate(
+    MonthName = factor(Month, levels = 5:9, labels = month_labels, ordered = TRUE),
+    MonthFactor = factor(Month)
+  )
+
+# Scatter Plot with Facets and Multiple Aesthetics 
+complex_chart <- air_clean %>%
+  ggplot(aes(
+    x = Wind,                  # Aesthetic 1: X-position (Wind Speed)
+    y = Ozone,                 # Aesthetic 2: Y-position (Ozone)
+    size = Temp,               # Aesthetic 3: Size (Temperature)
+    color = MonthName,         # Aesthetic 4: Colour (Month)
+    alpha = Solar.R            # Aesthetic 5: Alpha/Transparency (Solar Radiation)
+  )) +
+  geom_point(shape = 21, fill = "white", stroke = 0.5) + # Geometry: Points (shape 21 allows fill and stroke)
+  geom_smooth(method = "lm", se = FALSE, color = "black", linetype = "solid") + # Geometry: Linear Model smoothing
+  scale_size(range = c(1, 10)) + # Scale: Adjust the size range for Temp
+  scale_color_manual(values = RColorBrewer::brewer.pal(5, "Set1")) + # Scale: Manual, specific colours
+  facet_wrap(~MonthName, ncol = 3) + # Facets: Break plot down by MonthName
+  labs(
+    title = "New York Ozone Levels: Wind, Temperature, and Solar Effects",
+    subtitle = "Faceted by Month",
+    x = "Wind Speed (mph)",
+    y = "Ozone (ppb)",
+    color = "Month",
+    size = "Temperature (°F)",
+    alpha = "Solar Radiation (Langleys)"
+  ) + # Guides: Title and axis labels
+  theme_bw() + # Guides: Black and White theme
+  theme(legend.position = "bottom")
+
+complex_chart
+```
+
+# Here's another variant using Polar Coordinates.
+
+```{r}
+library(ggplot2)
+library(dplyr)
+
+# Cleaned the data first by removing NAs
+air_clean <- na.omit(airquality)
+
+# Converted Month to a factor for proper ordering and labeling
+month_labels <- c("May", "June", "July", "August", "September")
+air_clean <- air_clean %>%
+  mutate(
+    MonthName = factor(Month, levels = 5:9, labels = month_labels, ordered = TRUE),
+    MonthFactor = factor(Month)
+  )
+
+# Scatter Plot with Facets and Multiple Aesthetics 
+complex_chart <- air_clean %>%
+  ggplot(aes(
+    x = Wind,                  # Aesthetic 1: X-position (Wind Speed)
+    y = Ozone,                 # Aesthetic 2: Y-position (Ozone)
+    size = Temp,               # Aesthetic 3: Size (Temperature)
+    color = MonthName,         # Aesthetic 4: Colour (Month)
+    alpha = Solar.R            # Aesthetic 5: Alpha/Transparency (Solar Radiation)
+  )) +
+  geom_point(shape = 21, fill = "white", stroke = 0.5) + # Geometry: Points (shape 21 allows fill and stroke)
+  geom_smooth(method = "lm", se = FALSE, color = "black", linetype = "solid") + # Geometry: Linear Model smoothing
+  scale_size(range = c(1, 10)) + # Scale: Adjust the size range for Temp
+  scale_color_manual(values = RColorBrewer::brewer.pal(5, "Set1")) + # Scale: Manual, specific colours
+  facet_wrap(~MonthName, ncol = 3) + # Facets: Break plot down by MonthName
+  labs(
+    title = "New York Ozone Levels: Wind, Temperature, and Solar Effects",
+    subtitle = "Faceted by Month",
+    x = "Wind Speed (mph)",
+    y = "Ozone (ppb)",
+    color = "Month",
+    size = "Temperature (°F)",
+    alpha = "Solar Radiation (Langleys)"
+  ) + # Guides: Title and axis labels
+  theme_bw() + # Guides: Black and White theme
+  theme(legend.position = "bottom")
+
+complex_chart +
+  coord_polar() + # Changed to Polar Coordinates
+  labs(title = "Ozone Data in Polar Coordinates (Harder to Read)")
+```
+
+# Another variant using Boxplot Geometry
+
+```{r}
+# Load libraries
+library(ggplot2)
+library(dplyr)
+
+# Clean the data first (remove NAs)
+air_clean <- na.omit(airquality)
+
+# Convert Month to a factor for proper ordering and labeling
+month_labels <- c("May", "June", "July", "August", "September")
+air_clean <- air_clean %>%
+  mutate(
+    MonthName = factor(Month, levels = 5:9, labels = month_labels, ordered = TRUE),
+    MonthFactor = factor(Month)
+  )
+
+# Variant 2: Boxplot Geometry
+air_clean %>%
+  ggplot(aes(x = MonthName, y = Ozone, fill = MonthName)) +
+  geom_boxplot() + # Change to Boxplot Geometry
+  labs(title = "Ozone Distribution by Month (Summary View)", x = "Month", y = "Ozone (ppb)") +
+  theme_minimal()
+
+complex_chart
+
+```
+How does visual perception differ depending on the encoding chosen and the variants?
+
+Variants A and B both encode the same Wind–Ozone relationship. Still, the Cartesian scatterplot makes the negative correlation far easier to perceive than the polar version, whereas Variant C sacrifices that relationship to emphasise monthly ozone distributions instead.​
+
+Cartesian vs polar perception Cartesian scatterplots align with the way spatial perception naturally tracks positions along straight horizontal and vertical axes, making it efficient and accurate to judge trends and slopes.​ 
+
+Polar plots bend one axis into an angle and the other into a radius, which makes it harder to visually assess linear correlations, even though they can be more engaging aesthetically.​ When polar coordinates help, Polar layouts work best when at least one variable is inherently cyclical (for example, hour of day, month, or compass direction) because the circle reinforces the repeating nature of the data.​ In such cases, mapping time or phase to angle allows viewers to see periodic peaks and troughs around the circle; however, this benefit does not extend to simple bivariate correlation tasks, such as wind versus ozone.​
+
+Variant C Switching to a boxplot of Ozone by Month sacrifices the explicit Wind–Ozone relationship but emphasises differences in central tendency and spread between months.​ In this framing, months with higher median ozone and potentially wider boxes (for example, mid-summer months in many ozone datasets) stand out immediately, supporting questions about seasonal patterns rather than pairwise correlation.​
+
+A boxplot and a contour map serve very different purposes: a boxplot summarises one-dimensional distributions (often across categories), while a contour map visualises a smooth two-dimensional surface (plus a third variable encoded by contours or colour) (Yi, 2025).​
+
+What each shows:
+
+Boxplot: Shows median, quartiles, range, and potential outliers for a single continuous variable, often repeated side‑by‑side for groups (e.g., ozone by month).​
+
+Contour map: Shows how a third continuous variable (e.g., temperature) varies smoothly over a 2D domain, using isolines or filled bands to connect points of equal value.​
+
+Typical use cases:
+
+Boxplot: Best for comparing distributions and variability between categories, spotting skewness and outliers without plotting every data point.​
+
+Contour map: Best for representing fields like elevation, pressure, or density where the value changes continuously across space or a 2D parameter grid.​
+
+Strengths and weaknesses
+
+Boxplot strengths: Compact, suitable for many groups side‑by‑side, quickly communicates central tendency and spread, but hides fine detail and distribution shape.​
+
+Contour map strengths: Excellent for seeing gradients, ridges, and “hot/cold spots,” but less suited for precise numerical comparisons or simple one‑variable summaries.​
+
+How to choose between them:
+
+Use a boxplot when your analytical question is “How do distributions compare across groups or conditions?” for a single numeric variable.​ Use a contour map when your question is “How does a value vary over a 2D space or grid?” and you care about patterns like peaks, valleys, and gradients rather than per‑group summaries.​

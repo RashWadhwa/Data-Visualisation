@@ -1,25 +1,55 @@
 ---
-title: "My first Quarto Dashboard"
+title: "Data Insights Dashboard"
 subtitle: "Data visualisation"
 author: "RP Wadhwa"
 format: dashboard
+logo: images/uni_logo.jpeg
 nav-buttons: [linkedin, github]
 execute:
   echo: false
   warning: false
   message: false
-code-overflow: wrap
-
 date: "2026-01-07"
 ---
+
+# KPIs {orientation="rows"}
+
+```{r}
+#| content: valuebox
+#| title: "Articles per day"
+list(
+  icon = "pencil",
+  color = "warning",
+  value = 10
+)
+```
+
+```{r}
+#| content: valuebox
+#| title: "Comments per day"
+list(
+  icon = "chat",
+  color = "warning",
+  value = 52
+)
+```
+
+```{r}
+#| content: valuebox
+#| title: "Spam per day"
+list(
+  icon = "trash",
+  color = "warning",
+  value = 12
+)
+```
 
 # Multiple visuals
 
 ## row {height="60%"}
 
 ```{r}
-#| title: This is an example of interactive plot, using plotly library
-# eval: false
+#| title: Interactive Exploration: Horsepower vs MPG
 library(plotly)
 plot_ly(mtcars, x = ~hp, y = ~mpg, color = ~factor(cyl), 
         type = 'scatter', mode = 'markers') %>%
@@ -28,18 +58,35 @@ plot_ly(mtcars, x = ~hp, y = ~mpg, color = ~factor(cyl),
 ## row {height="40%"}
 
 ```{r}
-#| echo: false
-#| title: This is an example of Time-series, using line visual
+#| title: "Economic Trends: Unemployment"
 library(ggplot2)
 ggplot(economics, aes(date, unemploy)) + geom_line(color = "steelblue") + theme_minimal() + labs(title = "Unemployment Over Time")
 ```
 
 ```{r}
-#| title: This is an example of histogram, using ggplot2 library
+#| title: "Efficiency Distribution"
 library(ggplot2)
 ggplot(mtcars, aes(x = mpg)) +
   geom_histogram(binwidth = 2, fill = "skyblue", color = "white") +
   theme_minimal() +
   labs(title = "MPG Distribution")
 ```
-# World Map {orientation="rows" scrolling="true"}
+# University Map {orientation="rows" scrolling="true"}
+
+```{r}
+#| title: Campus Location"
+library(leaflet)
+
+leaflet() |>
+  addTiles() |>
+  addMarkers(
+    lng = -2.4233, lat = 52.7868,
+    popup = "Harper Adams University"
+  )
+
+
+
+
+
+
+

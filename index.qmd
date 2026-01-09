@@ -12,7 +12,7 @@ theme: cosmo
 
 ## Introduction
 
-Data visualisation is an important skill for any data professional. It is important to understand the difference between a graph and a graphic before planning any visuals. A graph is a mathematical representation of a set of points and their relationships. A graphic is its perceivable representation. This website demonstrates key concepts of the Grammar of Graphics and Object-Oriented Design, providing examples and explaining why these concepts are important.
+Data visualisation is an important skill for any data professional. It is important to understand the difference between a graph and a graphic before planning any visuals. A graph is a mathematical representation of a set of points and their relationships. A graphic is its perceivable representation. This website demonstrates key concepts of the Grammar of Graphics and Object-Oriented Design, providing examples and explaining why these concepts are important (Navarro, 2020).
 
 ## Task 1 - Planning a Graphic
 
@@ -70,23 +70,23 @@ ggplot(data = mpg,
 
 ## Task 2 – Explaining the Grammar of Graphics
 
-The **Grammar of Graphics** It is a foundational set of rules for constructing systematic and reproducible visualisations in R, primarily through the ggplot2 library. Much like the syntax of a spoken language—where a specific order of subject, verb, and object ensures clarity—this framework requires that each component of a graphic be declared in a logical sequence to produce the intended output.
+The **Grammar of Graphics** is a foundational set of rules for constructing systematic and reproducible visualisations in R, primarily through the ggplot2 library. Much like the syntax of a spoken language—where a specific order of subject, verb, and object ensures clarity—this framework requires that each component of a graphic be declared in a logical sequence to produce the intended output.
 
-**Data and Aesthetics (aes()):** The process begins with the raw data, followed by the declaration of aesthetics. Aesthetics serve as the instructions for what variables to map to the graph, such as $x$ and $y$ coordinates, colors, and shapes. Crucially, aes() does not render the graph itself; it merely defines the mapping between data and visual properties. E.g. aes(x = weight, y = height, color = "Green")
+**Data and Aesthetics (aes()):** The process begins with the raw data, followed by the declaration of aesthetics. Aesthetics serve as the guidelines for mapping variables to the graph, such as x and y coordinates, colors, and shapes. Crucially, aes() does not render the graph itself; it merely defines the mapping between data and visual properties. E.g. aes(x = weight, y = height, color = "Green")
 
-**Scales and Transformations:** These determine how data values are mapped to the visual space. While an IDE may provide default scaling, manual manipulation of scales is essential for telling complex stories and ensuring the data is positioned accurately. For example, using log_10 to handle skewed data, such as scale_y_log10() or scale_color_discrete().
+**Scales and Transformations:** These determine how data values are mapped to the visual space. While an IDE may provide default scaling, manual manipulation of scales is essential for telling complex stories and ensuring the data is positioned accurately. For example, using log_10 to handle skewed data, such as scale_y_log10() or scale_color_discrete() (Navarro, 2020).
 
-**Geometries (geom):** Geometries define the physical representation of the data, such as bar charts, histograms, or scatter plots. Selecting the appropriate geometry is vital for accurate data representation.They represent the data. For example, geom_point(), geom_line(), geom_boxplot(), geom_smooth().  
+**Geometries (geom):** Geometries define the physical representation of the data, such as bar charts, histograms, or scatter plots. Selecting the appropriate geometry is vital for accurate data representation. They represent the data. For example, geom_point(), geom_line(), geom_boxplot(), geom_smooth().  
 
 **Statistical Elements:** It refers to the functions that perform statistical transformations on the data before drawing the geometry (e.g., calculating means, binning, smoothing).
 
-**Coordinates:** This layer pinpoints exactly where data is positioned. While aesthetics handle the "look" of the data, coordinates define the physical space it occupies. Precision here is a matter of ethics; manipulating coordinates can lead to misleading visualisations if not handled carefully. By default, it is standard Cartesian. However, there are others which change the visual interpretation, such as coord_polar() or coord_flip().
+**Coordinates:** This layer pinpoints exactly where data is positioned. While aesthetics handle the "look" of the data, coordinates define the physical space it occupies. Precision here is a matter of ethics; manipulating coordinates can lead to misleading visualisations if not handled carefully. By default, it is  a standard Cartesian coordinate system. However, there are others which change the visual interpretation, such as coord_polar() or coord_flip().
 
-**Guides and Facets:** Guides are visual aids like axes, ticks, and legends. On the other hand, Facets are a powerful way to create multiple small plots, breaking a single plot into many subplots based on a categorical variable.
+**Guides and Facets:** Guides are visual aids such as axes, ticks, and legends. On the other hand, Facets are a powerful way to create multiple small plots, breaking a single plot into many subplots based on a categorical variable (Navarro, 2020).
 
 **Combining the Components:** The beauty of the Grammar is that we combine these elements using the + symbol in ggplot2. We start with the **Data**, map the **Aesthetics**, select a **Geometry** to represent the data, and then fine-tune the view with **Scales, Coordinates, and Guides**. This step-by-step layering allows us to build any graphic imaginable.
 
-Here are some of the code with examples, which demonstrate how I integrated the SPEC of Grammar of Graphics in these visuals.
+Here are some of the code examples that demonstrate how I integrated the Grammar of Graphics specification into these visuals.
 
 ```{r}
 # Violin + Boxplot combination

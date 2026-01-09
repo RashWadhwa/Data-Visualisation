@@ -1,0 +1,28 @@
+# Task4 – Animation with gganimate
+
+## Using UK Covid data
+
+Below is the animated visualisation of the UK's development trajectory, highlighting the impact of the 2020 COVID-19 pandemic.
+
+{{< video videos/gapminder_uk_covid.mp4 >}}" >}}
+
+### Reflective Commentary
+
+# The Value of Animation in Data Storytelling (Holtz, 2018)
+
+I see that animation brings a whole new time element to the table that something static graphs just can't do. For my data project, using the {gganimate} package allows me to actually watch the journey of global development unfold, rather than just seeing where things ended up. It's like seeing the whole movie instead of a single photo. While a static scatter plot shows a snapshot of where countries stand in a single year, an animation reveals the **velocity and direction** of change, making the data feel like a lived history rather than a set of coordinates (Holtz, 2018).
+
+## Interpretive Value: Highlighting the COVID-19 Event
+
+The "personal twist" in this animation is the inclusion of the 2020 COVID-19 impact on the United Kingdom. By extending the Gapminder dataset, we can see a dramatic departure from the long-term trend.
+
+-   **The Pattern Reversal:** For decades, the UK has exhibited a steady "up and to the right" trend, indicating increasing wealth and health.
+
+-   **The Shock:** In 2020, the bubble suddenly moved "down and to the left." This visual hiccup or reversal is a powerful way to communicate the scale of a global crisis.
+
+-   **Perception of Impact:** Since the audience has just witnessed 70 years of steady progress, the sudden decline in life expectancy and GDP per capita carries more emotional and analytical weight. It transforms a statistic into a visible "shock" to the system.
+
+## Grammar of Graphics Reflection
+
+From a technical standpoint, this animation relies on **Aesthetic Mapping** over time. By mapping year to the transition_reveal() function, we tell the Grammar of Graphics to treat the time variable as the "sequencer" for the visual frames. This reinforces the idea that an animation is not a different type of plot, but simply a plot where one aesthetic (time) is rendered across multiple frames instead of on a single axis.
+
