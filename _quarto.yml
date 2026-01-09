@@ -10,11 +10,11 @@ website:
     backgroud: primary
     left:
       - href: index.qmd
-        text: "Homepage"
+        text: Homepage
       - href: task3.qmd
-        text: "Complex Graphics"
+        text: Complex Graphics
       - href: task4.qmd
-        text: "Animation"  
+        text: Animation  
       - href: dash.qmd
         text: Dashboard
       
