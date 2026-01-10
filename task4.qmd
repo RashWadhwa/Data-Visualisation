@@ -12,6 +12,8 @@ theme: cosmo
 
 ## Using UK Covid data
 ```{r}
+#| eval: false
+#| echo: true
 
 # Load libraries
 library(gapminder)
