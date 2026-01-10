@@ -1,5 +1,5 @@
 ---
-title: Complex Graphics
+title: "Complex Graphics"
 subtitle: "Data Visualisation"
 author: "R P Wadhwa"
 format: html
@@ -10,9 +10,9 @@ theme: cosmo
 
 # Task3
 
-## I have used the built-in air quality dataset, which records daily air quality measurement in New Your to visualise the relationship between Wind Speed, Temperature, and Ozone levels across the five months of the study.
+I have used the built-in air quality dataset, which records daily air quality measurement in New Your to visualise the relationship between Wind Speed, Temperature, and Ozone levels across the five months of the study.
 
-### The following code creates a multi-layered graphic using multiple aesthetics, color, and faceting with annotations (Hadley Wickham, 2019).
+## The following code creates a multi-layered graphic using multiple aesthetics, color, and faceting with annotations (Hadley Wickham, 2019).
 
 ```{r}
 library(ggplot2)
@@ -134,7 +134,7 @@ air_clean %>%
 complex_chart
 
 ```
-How does visual perception differ depending on the encoding chosen and the variants?
+# How does visual perception differ depending on the encoding chosen and the variants?
 
 Variants A and B both encode the same Wind–Ozone relationship. Still, the Cartesian scatterplot makes the negative correlation far easier to perceive than the polar version, whereas Variant C sacrifices that relationship to emphasise monthly ozone distributions instead.​
 
@@ -146,24 +146,24 @@ Variant C Switching to a boxplot of Ozone by Month sacrifices the explicit Wind�
 
 A boxplot and a contour map serve very different purposes: a boxplot summarises one-dimensional distributions (often across categories), while a contour map visualises a smooth two-dimensional surface (plus a third variable encoded by contours or colour) (Yi, 2025).​
 
-What each shows:
+**What each shows:**
 
 Boxplot: Shows median, quartiles, range, and potential outliers for a single continuous variable, often repeated side‑by‑side for groups (e.g., ozone by month).​
 
 Contour map: Shows how a third continuous variable (e.g., temperature) varies smoothly over a 2D domain, using isolines or filled bands to connect points of equal value.​
 
-Typical use cases:
+**Typical use cases:**
 
 Boxplot: Best for comparing distributions and variability between categories, spotting skewness and outliers without plotting every data point.​
 
 Contour map: Best for representing fields like elevation, pressure, or density where the value changes continuously across space or a 2D parameter grid.​
 
-Strengths and weaknesses
+**Strengths and weaknesses**
 
 Boxplot strengths: Compact, suitable for many groups side‑by‑side, quickly communicates central tendency and spread, but hides fine detail and distribution shape.​
 
 Contour map strengths: Excellent for seeing gradients, ridges, and “hot/cold spots,” but less suited for precise numerical comparisons or simple one‑variable summaries.​
 
-How to choose between them:
+**How to choose between them:**
 
 Use a boxplot when your analytical question is “How do distributions compare across groups or conditions?” for a single numeric variable.​ Use a contour map when your question is “How does a value vary over a 2D space or grid?” and you care about patterns like peaks, valleys, and gradients rather than per‑group summaries.​
