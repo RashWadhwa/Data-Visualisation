@@ -148,9 +148,9 @@ A boxplot and a contour map serve very different purposes: a boxplot summarises 
 
 **What each shows:**
 
-Boxplot: Shows median, quartiles, range, and potential outliers for a single continuous variable, often repeated side‑by‑side for groups (e.g., ozone by month).​
+**Boxplot:** Shows median, quartiles, range, and potential outliers for a single continuous variable, often repeated side‑by‑side for groups (e.g., ozone by month).​
 
-Contour map: Shows how a third continuous variable (e.g., temperature) varies smoothly over a 2D domain, using isolines or filled bands to connect points of equal value.​
+**Contour map:** Shows how a third continuous variable (e.g., temperature) varies smoothly over a 2D domain, using isolines or filled bands to connect points of equal value.​
 
 **Typical use cases:**
 

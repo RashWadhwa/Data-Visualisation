@@ -8,8 +8,6 @@ toc-depth: 3
 theme: cosmo
 ---
 
-
-
 # Task4 – Animation with gganimate
 
 ## Using UK Covid data

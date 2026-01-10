@@ -46,7 +46,7 @@ A good SPEC breaks down the graphic into the core components of the Grammar of G
 |  | Colour: Use a discrete, colour-blind–friendly-palette | scale_color_brewer(palette = "Set1") |
 | **Coordinates** | Cartesian (X-Y) | coord_cartesian() |
 | **Guides** | Title: "Engine Size vs Fuel Efficiency" | labs(title = "") |
-|  | Theme: Minimal appearance | theme_minimal() |
+| **Themes** | Theme: Minimal appearance | theme_minimal() |
 
 ```{r}
 library(ggplot2)
@@ -86,7 +86,7 @@ The **Grammar of Graphics** is a foundational set of rules for constructing syst
 
 **Combining the Components:** The beauty of the Grammar is that we combine these elements using the + symbol in ggplot2. We start with the **Data**, map the **Aesthetics**, select a **Geometry** to represent the data, and then fine-tune the view with **Scales, Coordinates, and Guides**. This step-by-step layering allows us to build any graphic imaginable.
 
-Here are some of the code examples that demonstrate how I integrated the Grammar of Graphics specification into these visuals.
+**Here are some of the code examples that demonstrate how I integrated the Grammar of Graphics specification into these visuals.**
 
 ```{r}
 # Violin + Boxplot combination
