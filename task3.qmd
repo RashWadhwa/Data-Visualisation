@@ -12,7 +12,7 @@ theme: cosmo
 
 I have used the built-in air quality dataset, which records daily air quality measurement in New Your to visualise the relationship between Wind Speed, Temperature, and Ozone levels across the five months of the study.
 
-## The following code creates a multi-layered graphic using multiple aesthetics, color, and faceting with annotations (Hadley Wickham, 2019).
+The following code creates a multi-layered graphic using multiple aesthetics, color, and faceting with annotations (Hadley Wickham, 2019).
 
 ```{r}
 library(ggplot2)
