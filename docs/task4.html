@@ -6,10 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="RP Wadhwa">
-<meta name="dcterms.date" content="2026-01-07">
+<meta name="author" content="R P Wadhwa">
 
-<title>Data Insights Dashboard – Data Visualization Portfolio</title>
+<title>Animation – Data Visualization Portfolio</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -21,6 +20,41 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -39,22 +73,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-b758ccaa5987ceb1b75504551e579abf.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-029b10fc0dc652dab2ec1ac156c1a037.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-029b10fc0dc652dab2ec1ac156c1a037.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-029b10fc0dc652dab2ec1ac156c1a037.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
-<script src="site_libs/quarto-dashboard/quarto-dashboard.js"></script>
-<script src="site_libs/quarto-dashboard/stickythead.js"></script>
-
-
-
-<script src="site_libs/quarto-dashboard/web-components.js" type="module"></script>
-<script src="site_libs/quarto-dashboard/components.js"></script>
-
+<link href="site_libs/bootstrap/bootstrap-029b10fc0dc652dab2ec1ac156c1a037.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -82,44 +104,11 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<link href="site_libs/htmltools-fill-0.5.8.1/fill.css" rel="stylesheet">
-
-<script src="site_libs/htmlwidgets-1.6.4/htmlwidgets.js"></script>
-
-<script src="site_libs/plotly-binding-4.11.0/plotly.js"></script>
-
-<script src="site_libs/typedarray-0.1/typedarray.min.js"></script>
-
-<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
-
-<link href="site_libs/crosstalk-1.2.2/css/crosstalk.min.css" rel="stylesheet">
-
-<script src="site_libs/crosstalk-1.2.2/js/crosstalk.min.js"></script>
-
-<link href="site_libs/plotly-htmlwidgets-css-2.11.1/plotly-htmlwidgets.css" rel="stylesheet">
-
-<script src="site_libs/plotly-main-2.11.1/plotly-latest.min.js"></script>
-
-<link href="site_libs/leaflet-1.3.1/leaflet.css" rel="stylesheet">
-
-<script src="site_libs/leaflet-1.3.1/leaflet.js"></script>
-
-<link href="site_libs/leafletfix-1.0.0/leafletfix.css" rel="stylesheet">
-
-<script src="site_libs/proj4-2.6.2/proj4.min.js"></script>
-
-<script src="site_libs/Proj4Leaflet-1.0.1/proj4leaflet.js"></script>
-
-<link href="site_libs/rstudio_leaflet-1.3.1/rstudio_leaflet.css" rel="stylesheet">
-
-<script src="site_libs/leaflet-binding-2.2.3/leaflet.js"></script>
-
 
 
 </head>
 
-<body class="quarto-dashboard nav-fixed dashboard-fill fullcontent quarto-light">
-
+<body class="nav-fixed quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -145,184 +134,162 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Complex Graphics</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./task4.html"> 
+    <a class="nav-link active" href="./task4.html" aria-current="page"> 
 <span class="menu-text">Animation</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./dash.html" aria-current="page"> 
+    <a class="nav-link" href="./dash.html"> 
 <span class="menu-text">Dashboard</span></a>
   </li>  
 </ul>
-          <div class="quarto-dashboard-links"><a class="quarto-dashboard-link" href="https://www.linkedin.com/sharing/share-offsite/?url=|url|&amp;title=Data%20Insights%20Dashboard" title="LinkedIn"><i class="bi bi-linkedin"></i></a><a class="quarto-dashboard-link" href="https://github.com/RashWadhwa/Data-Visualisation/" title="GitHub"><i class="bi bi-github"></i></a></div></div> <!-- /navcollapse -->
+          </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
 </div>
       </div> <!-- /container-fluid -->
     </nav>
-<header id="quarto-dashboard-header">
-<nav class="navbar navbar-expand-md slim" data-bs-theme="dark">
-  <div class="navbar-container container-fluid">
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#dashboard-collapse" aria-controls="dashboard-collapse" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>    
-
-
-    <div class="navbar-brand-container">
-    <a href="#"><img src="images/uni_logo.jpeg" alt="" class="navbar-logo light-content d-inline-block"></a>
-    <a href="#"><img src="images/uni_logo.jpeg" alt="" class="navbar-logo dark-content d-inline-block"></a>
-      <div class="navbar-title">
-        <div class="navbar-title-text"><a href="#">Data Insights Dashboard</a></div>
-        <div class="navbar-subtitle">Data visualisation</div>
-        <div class="navbar-author">RP Wadhwa</div>
-      </div>
-    </div>
-<div id="dashboard-collapse" class="navbar-collapse collapse"><ul class="navbar-nav navbar-nav-scroll me-auto" role="tablist"><li class="nav-item" role="presentation"><a id="tab-kpis" class="nav-link active" data-bs-toggle="tab" role="tab" data-bs-target="#kpis" data-scrolling="false" href="#kpis" aria-controls="kpis" aria-selected="true"><span class="nav-link-text">KPIs</span></a></li><li class="nav-item" role="presentation"><a id="tab-multiple-visuals" class="nav-link" data-bs-toggle="tab" role="tab" data-bs-target="#multiple-visuals" data-scrolling="false" href="#multiple-visuals" aria-controls="multiple-visuals" aria-selected="false"><span class="nav-link-text">Multiple visuals</span></a></li><li class="nav-item" role="presentation"><a id="tab-university-map" class="nav-link" data-bs-toggle="tab" role="tab" data-bs-target="#university-map" data-scrolling="true" href="#university-map" aria-controls="university-map" aria-selected="false"><span class="nav-link-text">University Map</span></a></li></ul></div></div>
-</nav>
-</header></header>
+</header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-layout-custom page-navbar quarto-dashboard-content bslib-gap-spacing html-fill-container bslib-page-fill quarto-dashboard-pages">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#task4-animation-and-reflection-with-gganimate" id="toc-task4-animation-and-reflection-with-gganimate" class="nav-link active" data-scroll-target="#task4-animation-and-reflection-with-gganimate"><span class="header-section-number">1</span> Task4 – Animation and Reflection with gganimate</a>
+  <ul class="collapse">
+  <li><a href="#using-uk-covid-data" id="toc-using-uk-covid-data" class="nav-link" data-scroll-target="#using-uk-covid-data"><span class="header-section-number">1.1</span> Using UK Covid data</a></li>
+  </ul></li>
+  <li><a href="#the-value-of-animation-in-data-storytelling-holtz-2018" id="toc-the-value-of-animation-in-data-storytelling-holtz-2018" class="nav-link" data-scroll-target="#the-value-of-animation-in-data-storytelling-holtz-2018"><span class="header-section-number">2</span> The Value of Animation in Data Storytelling (Holtz, 2018)</a>
+  <ul class="collapse">
+  <li><a href="#interpretive-value-highlighting-the-covid-19-event" id="toc-interpretive-value-highlighting-the-covid-19-event" class="nav-link" data-scroll-target="#interpretive-value-highlighting-the-covid-19-event"><span class="header-section-number">2.1</span> Interpretive Value: Highlighting the COVID-19 Event</a></li>
+  <li><a href="#grammar-of-graphics-reflection" id="toc-grammar-of-graphics-reflection" class="nav-link" data-scroll-target="#grammar-of-graphics-reflection"><span class="header-section-number">2.2</span> Grammar of Graphics Reflection</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
+<main class="content" id="quarto-document-content">
 
-<div class="bslib-grid-item html-fill-item tab-content bslib-grid" data-layout="fill" style="display: grid; grid-template-rows: minmax(3em, 1fr); grid-auto-columns: minmax(0, 1fr);">
-<div id="kpis" class="dashboard-page tab-pane show active html-fill-item html-fill-container" data-orientation="rows" aria-labelledby="tab-kpis">
-<div class="html-fill-item html-fill-container bslib-grid" style="display: grid; grid-template-rows: minmax(3em, 1fr) minmax(3em, 1fr) minmax(3em, 1fr); grid-auto-columns: minmax(0, 1fr);">
-<div class="card valuebox cell html-fill-item html-fill-container bslib-card bslib-value-box bg-warning showcase-left-center" data-bslib-card-init="" data-require-bs-caller="card()">
-<div class="card-body html-fill-item html-fill-container">
-<div data-icon="pencil" class="html-fill-item html-fill-container value-box-grid">
-<div class="value-box-showcase html-fill-item html-fill-container">
-
-<i class="bi bi-pencil"></i></div>
-<div class="value-box-area">
-<p class="value-box-title">
-Articles per day
-</p>
-<p class="value-box-value">
-10
-</p>
-</div>
-</div>
-</div>
-<script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div>
-<div class="card valuebox cell html-fill-item html-fill-container bslib-card bslib-value-box bg-warning showcase-left-center" data-bslib-card-init="" data-require-bs-caller="card()">
-<div class="card-body html-fill-item html-fill-container">
-<div data-icon="chat" class="html-fill-item html-fill-container value-box-grid">
-<div class="value-box-showcase html-fill-item html-fill-container">
-
-<i class="bi bi-chat"></i></div>
-<div class="value-box-area">
-<p class="value-box-title">
-Comments per day
-</p>
-<p class="value-box-value">
-52
-</p>
-</div>
-</div>
-</div>
-<script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div>
-<div class="card valuebox cell html-fill-item html-fill-container bslib-card bslib-value-box bg-warning showcase-left-center" data-bslib-card-init="" data-require-bs-caller="card()">
-<div class="card-body html-fill-item html-fill-container">
-<div data-icon="trash" class="html-fill-item html-fill-container value-box-grid">
-<div class="value-box-showcase html-fill-item html-fill-container">
-
-<i class="bi bi-trash"></i></div>
-<div class="value-box-area">
-<p class="value-box-title">
-Spam per day
-</p>
-<p class="value-box-value">
-12
-</p>
-</div>
-</div>
-</div>
-<script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div>
-</div>
-</div>
-<div id="multiple-visuals" class="dashboard-page tab-pane grid-skip html-fill-item html-fill-container" data-orientation="rows" aria-labelledby="tab-multiple-visuals">
-<div class="html-fill-item html-fill-container bslib-grid" style="display: grid; grid-template-rows: minmax(3em, 60fr) minmax(3em, 40fr); grid-auto-columns: minmax(0, 1fr);">
-<div class="html-fill-item html-fill-container bslib-grid" style="display: grid; grid-template-columns: minmax(3em, 1fr);
-grid-auto-rows: minmax(0, 1fr);">
-<div class="card cell html-fill-item html-fill-container bslib-card" data-title="Interactive Exploration: Horsepower vs MPG" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
-<div class="card-header"><div class="card-title"><span style="display: inline">
-Interactive Exploration: Horsepower vs MPG
-</span></div></div>
-<div class="card-body html-fill-item html-fill-container">
-<div class="cell-output-display html-fill-item html-fill-container">
-<div class="plotly html-widget html-fill-item html-fill-container" id="htmlwidget-9dde3169858cd6f0d547" style="width:100%;height:406px;"></div>
-<script type="application/json" data-for="htmlwidget-9dde3169858cd6f0d547">{"x":{"visdat":{"9a8c4af317":["function () ","plotlyVisDat"]},"cur_data":"9a8c4af317","attrs":{"9a8c4af317":{"x":{},"y":{},"mode":"markers","color":{},"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatter"}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"title":"Horsepower vs MPG (Interactive)","xaxis":{"domain":[0,1],"automargin":true,"title":"hp"},"yaxis":{"domain":[0,1],"automargin":true,"title":"mpg"},"hovermode":"closest","showlegend":true},"source":"A","config":{"modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"data":[{"x":[93,62,95,66,52,65,97,66,91,113,109],"y":[22.800000000000001,24.399999999999999,22.800000000000001,32.399999999999999,30.399999999999999,33.899999999999999,21.5,27.300000000000001,26,30.399999999999999,21.399999999999999],"mode":"markers","type":"scatter","name":"4","marker":{"color":"rgba(102,194,165,1)","line":{"color":"rgba(102,194,165,1)"}},"textfont":{"color":"rgba(102,194,165,1)"},"error_y":{"color":"rgba(102,194,165,1)"},"error_x":{"color":"rgba(102,194,165,1)"},"line":{"color":"rgba(102,194,165,1)"},"xaxis":"x","yaxis":"y","frame":null},{"x":[110,110,110,105,123,123,175],"y":[21,21,21.399999999999999,18.100000000000001,19.199999999999999,17.800000000000001,19.699999999999999],"mode":"markers","type":"scatter","name":"6","marker":{"color":"rgba(252,141,98,1)","line":{"color":"rgba(252,141,98,1)"}},"textfont":{"color":"rgba(252,141,98,1)"},"error_y":{"color":"rgba(252,141,98,1)"},"error_x":{"color":"rgba(252,141,98,1)"},"line":{"color":"rgba(252,141,98,1)"},"xaxis":"x","yaxis":"y","frame":null},{"x":[175,245,180,180,180,205,215,230,150,150,245,175,264,335],"y":[18.699999999999999,14.300000000000001,16.399999999999999,17.300000000000001,15.199999999999999,10.4,10.4,14.699999999999999,15.5,15.199999999999999,13.300000000000001,19.199999999999999,15.800000000000001,15],"mode":"markers","type":"scatter","name":"8","marker":{"color":"rgba(141,160,203,1)","line":{"color":"rgba(141,160,203,1)"}},"textfont":{"color":"rgba(141,160,203,1)"},"error_y":{"color":"rgba(141,160,203,1)"},"error_x":{"color":"rgba(141,160,203,1)"},"line":{"color":"rgba(141,160,203,1)"},"xaxis":"x","yaxis":"y","frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
-</div>
-</div>
-<bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
-    <template>Expand</template>
-    <span class="bslib-full-screen-enter badge rounded-pill">
-        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="height:1em;width:1em;" aria-hidden="true" role="img"><path d="M20 5C20 4.4 19.6 4 19 4H13C12.4 4 12 3.6 12 3C12 2.4 12.4 2 13 2H21C21.6 2 22 2.4 22 3V11C22 11.6 21.6 12 21 12C20.4 12 20 11.6 20 11V5ZM4 19C4 19.6 4.4 20 5 20H11C11.6 20 12 20.4 12 21C12 21.6 11.6 22 11 22H3C2.4 22 2 21.6 2 21V13C2 12.4 2.4 12 3 12C3.6 12 4 12.4 4 13V19Z"></path></svg>
-    </span>
-</bslib-tooltip><script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div>
-</div>
-<div class="html-fill-item html-fill-container bslib-grid" style="display: grid; grid-template-columns: minmax(3em, 1fr) minmax(3em, 1fr);
-grid-auto-rows: minmax(0, 1fr);">
-<div class="card cell html-fill-item html-fill-container bslib-card" data-title="Economic Trends: Unemployment" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
-<div class="card-header"><div class="card-title"><span style="display: inline">
-Economic Trends: Unemployment
-</span></div></div>
-<div class="card-body html-fill-item html-fill-container">
-<div class="cell-output-display html-fill-item html-fill-container">
-<img src="dash_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid quarto-dashboard-img-contain">
-</div>
-</div>
-<bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
-    <template>Expand</template>
-    <span class="bslib-full-screen-enter badge rounded-pill">
-        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="height:1em;width:1em;" aria-hidden="true" role="img"><path d="M20 5C20 4.4 19.6 4 19 4H13C12.4 4 12 3.6 12 3C12 2.4 12.4 2 13 2H21C21.6 2 22 2.4 22 3V11C22 11.6 21.6 12 21 12C20.4 12 20 11.6 20 11V5ZM4 19C4 19.6 4.4 20 5 20H11C11.6 20 12 20.4 12 21C12 21.6 11.6 22 11 22H3C2.4 22 2 21.6 2 21V13C2 12.4 2.4 12 3 12C3.6 12 4 12.4 4 13V19Z"></path></svg>
-    </span>
-</bslib-tooltip><script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div><div class="card cell html-fill-item html-fill-container bslib-card" data-title="Efficiency Distribution" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
-<div class="card-header"><div class="card-title"><span style="display: inline">
-Efficiency Distribution
-</span></div></div>
-<div class="card-body html-fill-item html-fill-container">
-<div class="cell-output-display html-fill-item html-fill-container">
-<img src="dash_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid quarto-dashboard-img-contain">
-</div>
-</div>
-<bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
-    <template>Expand</template>
-    <span class="bslib-full-screen-enter badge rounded-pill">
-        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="height:1em;width:1em;" aria-hidden="true" role="img"><path d="M20 5C20 4.4 19.6 4 19 4H13C12.4 4 12 3.6 12 3C12 2.4 12.4 2 13 2H21C21.6 2 22 2.4 22 3V11C22 11.6 21.6 12 21 12C20.4 12 20 11.6 20 11V5ZM4 19C4 19.6 4.4 20 5 20H11C11.6 20 12 20.4 12 21C12 21.6 11.6 22 11 22H3C2.4 22 2 21.6 2 21V13C2 12.4 2.4 12 3 12C3.6 12 4 12.4 4 13V19Z"></path></svg>
-    </span>
-</bslib-tooltip><script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div>
-</div>
-</div>
-</div>
-<div id="university-map" class="dashboard-page tab-pane grid-skip html-fill-item html-fill-container" data-orientation="rows" data-scrolling="true" aria-labelledby="tab-university-map">
-<div class="html-fill-item html-fill-container bslib-grid" style="display: grid; grid-template-rows: minmax(3em, 1fr); grid-auto-columns: minmax(0, 1fr);">
-<div class="card cell html-fill-item html-fill-container bslib-card" data-title="Campus Location" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
-<div class="card-header"><div class="card-title"><span style="display: inline">
-Campus Location
-</span></div></div>
-<div class="card-body html-fill-item html-fill-container">
-<div class="cell-output-display html-fill-item html-fill-container">
-<div class="leaflet html-widget html-fill-item html-fill-container" id="htmlwidget-e409177aa1db5017c0c0" style="width:100%;height:406px;"></div>
-<script type="application/json" data-for="htmlwidget-e409177aa1db5017c0c0">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"https://openstreetmap.org/copyright/\">OpenStreetMap<\/a>,  <a href=\"https://opendatacommons.org/licenses/odbl/\">ODbL<\/a>"}]},{"method":"addMarkers","args":[52.7868,-2.4233,null,null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},"Harper Adams University",null,null,null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]}],"limits":{"lat":[52.7868,52.7868],"lng":[-2.4233,-2.4233]}},"evals":[],"jsHooks":[]}</script>
-</div>
-</div>
-<bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
-    <template>Expand</template>
-    <span class="bslib-full-screen-enter badge rounded-pill">
-        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="height:1em;width:1em;" aria-hidden="true" role="img"><path d="M20 5C20 4.4 19.6 4 19 4H13C12.4 4 12 3.6 12 3C12 2.4 12.4 2 13 2H21C21.6 2 22 2.4 22 3V11C22 11.6 21.6 12 21 12C20.4 12 20 11.6 20 11V5ZM4 19C4 19.6 4.4 20 5 20H11C11.6 20 12 20.4 12 21C12 21.6 11.6 22 11 22H3C2.4 22 2 21.6 2 21V13C2 12.4 2.4 12 3 12C3.6 12 4 12.4 4 13V19Z"></path></svg>
-    </span>
-</bslib-tooltip><script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div>
-
-
-<div id="3ade8a4a-fb1d-4a6c-8409-ac45482d5fc9" class="hidden html-fill-item html-fill-container">
-
-</div>
-</div>
-</div>
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Animation</h1>
+<p class="subtitle lead">Data Visualisation</p>
 </div>
 
 
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>R P Wadhwa </p>
+          </div>
+  </div>
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="task4-animation-and-reflection-with-gganimate" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Task4 – Animation and Reflection with gganimate</h1>
+<p>Below is the animated visualisation of the UK’s development trajectory, highlighting the impact of the 2020 COVID-19 pandemic.</p>
+<p><img src="videos/gapminder_uk_covid_reflection.gif" class="img-fluid"></p>
+<section id="using-uk-covid-data" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="using-uk-covid-data"><span class="header-section-number">1.1</span> Using UK Covid data</h2>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Load libraries</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gapminder)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gganimate)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gifski)</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co"># 1. Preparing Data (UK 2020 Data)</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>uk_2007 <span class="ot">&lt;-</span> gapminder <span class="sc">%&gt;%</span> <span class="fu">filter</span>(country <span class="sc">==</span> <span class="st">"United Kingdom"</span>, year <span class="sc">==</span> <span class="dv">2007</span>)</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>uk_2020_covid <span class="ot">&lt;-</span> uk_2007 <span class="sc">%&gt;%</span> </span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">year =</span> <span class="dv">2020</span>, </span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">lifeExp =</span> lifeExp <span class="sc">-</span> <span class="fl">1.5</span>, </span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>    <span class="at">gdpPercap =</span> gdpPercap <span class="sc">*</span> <span class="fl">0.96</span> </span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>gap_data_covid <span class="ot">&lt;-</span> <span class="fu">bind_rows</span>(gapminder, uk_2020_covid) <span class="sc">%&gt;%</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">Continent =</span> <span class="fu">factor</span>(continent))</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="co"># 2. Creating the Base Plot</span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>base_anim_covid <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>  gap_data_covid,</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>  <span class="fu">aes</span>(<span class="at">x =</span> gdpPercap, <span class="at">y =</span> lifeExp, <span class="at">size =</span> pop, <span class="at">color =</span> Continent, <span class="at">group =</span> country)</span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>) <span class="sc">+</span></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">alpha =</span> <span class="fl">0.7</span>) <span class="sc">+</span></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>  <span class="co"># geom_path(aes(group = country), alpha = 0.3) +</span></span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(</span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>    <span class="at">data =</span> gap_data_covid <span class="sc">%&gt;%</span> <span class="fu">filter</span>(country <span class="sc">==</span> <span class="st">"United Kingdom"</span>),</span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>    <span class="at">color =</span> <span class="st">"red"</span>, <span class="at">size =</span> <span class="dv">4</span>, <span class="at">shape =</span> <span class="dv">1</span></span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_log10</span>(<span class="at">labels =</span> scales<span class="sc">::</span>dollar) <span class="sc">+</span> </span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_size</span>(<span class="at">range =</span> <span class="fu">c</span>(<span class="dv">2</span>, <span class="dv">18</span>), <span class="at">guide =</span> <span class="st">"none"</span>) <span class="sc">+</span> </span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>  <span class="fu">coord_cartesian</span>(<span class="at">xlim =</span> <span class="fu">c</span>(<span class="dv">250</span>, <span class="dv">120000</span>), <span class="at">ylim =</span> <span class="fu">c</span>(<span class="dv">25</span>, <span class="dv">90</span>)) <span class="sc">+</span></span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">'Year: {frame_along} | Event: COVID-19'</span>, </span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a>    <span class="at">subtitle =</span> <span class="st">"Simulated effect of COVID-19 on UK Life Expectancy"</span>,</span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"GDP per Capita"</span>,</span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"Life Expectancy (Years)"</span>,</span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a>    <span class="at">caption =</span> <span class="st">"Data Source: Gapminder (Extended for 2020)"</span></span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a><span class="co"># 3. Adding Animation Layers </span></span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a>anim_covid <span class="ot">&lt;-</span> base_anim_covid <span class="sc">+</span></span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a>  <span class="fu">transition_reveal</span>(year) <span class="sc">+</span></span>
+<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a>  <span class="fu">shadow_wake</span>(<span class="at">wake_length =</span> <span class="fl">0.1</span>, <span class="at">alpha =</span> <span class="cn">FALSE</span>) </span>
+<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a> </span>
+<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a><span class="co"># 4. Save the GIF </span></span>
+<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a><span class="fu">anim_save</span>(</span>
+<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a>  <span class="at">filename =</span> <span class="st">"videos/gapminder_uk_covid_reflection.gif"</span>,</span>
+<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a>  <span class="at">animation =</span> anim_covid, </span>
+<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a>  <span class="at">nframes =</span> <span class="dv">150</span>,</span>
+<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a>  <span class="at">fps =</span> <span class="dv">10</span>,</span>
+<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a>  <span class="at">width =</span> <span class="dv">800</span>,</span>
+<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a>  <span class="at">height =</span> <span class="dv">480</span>,</span>
+<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a>  <span class="at">renderer =</span> <span class="fu">gifski_renderer</span>()</span>
+<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+</div>
+<p>Reflective Commentary</p>
+</section>
+</section>
+<section id="the-value-of-animation-in-data-storytelling-holtz-2018" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> The Value of Animation in Data Storytelling (Holtz, 2018)</h1>
+<p>I see that animation brings a whole new time element to the table that something static graphs just can’t do. For my data project, using the {gganimate} package allows me to actually watch the journey of global development unfold, rather than just seeing where things ended up. It’s like seeing the whole movie instead of a single photo. While a static scatter plot shows a snapshot of where countries stand in a single year, an animation reveals the <strong>velocity and direction</strong> of change, making the data feel like a lived history rather than a set of coordinates (Holtz, 2018).</p>
+<section id="interpretive-value-highlighting-the-covid-19-event" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="interpretive-value-highlighting-the-covid-19-event"><span class="header-section-number">2.1</span> Interpretive Value: Highlighting the COVID-19 Event</h2>
+<p>The “personal twist” in this animation is the inclusion of the 2020 COVID-19 impact on the United Kingdom. By extending the Gapminder dataset, we can see a dramatic departure from the long-term trend.</p>
+<ul>
+<li><p><strong>The Pattern Reversal:</strong> For decades, the UK has exhibited a steady “up and to the right” trend, indicating increasing wealth and health.</p></li>
+<li><p><strong>The Shock:</strong> In 2020, the bubble suddenly moved “down and to the left.” This visual hiccup or reversal is a powerful way to communicate the scale of a global crisis.</p></li>
+<li><p><strong>Perception of Impact:</strong> Since the audience has just witnessed 70 years of steady progress, the sudden decline in life expectancy and GDP per capita carries more emotional and analytical weight. It transforms a statistic into a visible “shock” to the system.</p></li>
+</ul>
+</section>
+<section id="grammar-of-graphics-reflection" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="grammar-of-graphics-reflection"><span class="header-section-number">2.2</span> Grammar of Graphics Reflection</h2>
+<p>From a technical standpoint, this animation relies on <strong>Aesthetic Mapping</strong> over time. By mapping year to the transition_reveal() function, we tell the Grammar of Graphics to treat the time variable as the “sequencer” for the visual frames. This reinforces the idea that an animation is not a different type of plot, but simply a plot where one aesthetic (time) is rendered across multiple frames instead of on a single axis.</p>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
@@ -725,14 +692,6 @@ Campus Location
   </script>
 </div> <!-- /content -->
 
-<script type="application/javascript">
-window.document.addEventListener("DOMContentLoaded", function (_event) {
-  if (window.bslib.Card) {
-    window.bslib.Card.initializeAllCards();
-  }
-}); 
-</script>
-  
 
 
 

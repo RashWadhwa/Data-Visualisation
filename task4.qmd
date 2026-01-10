@@ -8,7 +8,12 @@ toc-depth: 3
 theme: cosmo
 ---
 
-# Task4 – Animation with gganimate
+# Task4 – Animation and Reflection with gganimate
+
+Below is the animated visualisation of the UK's development trajectory, highlighting the impact 
+of the 2020 COVID-19 pandemic.
+
+![](videos/gapminder_uk_covid_reflection.gif)
 
 ## Using UK Covid data
 ```{r}
@@ -73,10 +78,6 @@ anim_save(
   renderer = gifski_renderer()
 )
 ```
-
-Below is the animated visualisation of the UK's development trajectory, highlighting the impact of the 2020 COVID-19 pandemic.
-
-{{< video videos/gapminder_uk_covid_reflection.gif >}}
 
 Reflective Commentary
 
