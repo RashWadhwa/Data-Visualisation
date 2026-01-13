@@ -58,7 +58,7 @@ complex_chart <- air_clean %>%
 complex_chart
 ```
 
-# Here's another variant using Polar Coordinates.
+## Here's another variant using Polar Coordinates.
 
 ```{r}
 library(ggplot2)
@@ -106,7 +106,7 @@ complex_chart +
   labs(title = "Ozone Data in Polar Coordinates (Harder to Read)")
 ```
 
-# Another variant using Boxplot Geometry
+## Another variant using Boxplot Geometry
 
 ```{r}
 # Load libraries

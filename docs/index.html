@@ -157,12 +157,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#welcome-to-my-website." id="toc-welcome-to-my-website." class="nav-link active" data-scroll-target="#welcome-to-my-website."><span class="header-section-number">1</span> Welcome to my Website.</a>
-  <ul class="collapse">
-  <li><a href="#introduction" id="toc-introduction" class="nav-link" data-scroll-target="#introduction"><span class="header-section-number">1.1</span> Introduction</a></li>
-  <li><a href="#task-1---planning-a-graphic" id="toc-task-1---planning-a-graphic" class="nav-link" data-scroll-target="#task-1---planning-a-graphic"><span class="header-section-number">1.2</span> Task 1 - Planning a Graphic</a></li>
-  <li><a href="#task-2-explaining-the-grammar-of-graphics" id="toc-task-2-explaining-the-grammar-of-graphics" class="nav-link" data-scroll-target="#task-2-explaining-the-grammar-of-graphics"><span class="header-section-number">1.3</span> Task 2 – Explaining the Grammar of Graphics</a></li>
-  </ul></li>
+  <li><a href="#welcome-to-my-website." id="toc-welcome-to-my-website." class="nav-link active" data-scroll-target="#welcome-to-my-website."><span class="header-section-number">1</span> Welcome to my Website.</a></li>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link" data-scroll-target="#introduction"><span class="header-section-number">2</span> Introduction</a></li>
+  <li><a href="#task-1---planning-a-graphic" id="toc-task-1---planning-a-graphic" class="nav-link" data-scroll-target="#task-1---planning-a-graphic"><span class="header-section-number">3</span> Task 1 - Planning a Graphic</a></li>
+  <li><a href="#task-2-explaining-the-grammar-of-graphics" id="toc-task-2-explaining-the-grammar-of-graphics" class="nav-link" data-scroll-target="#task-2-explaining-the-grammar-of-graphics"><span class="header-section-number">4</span> Task 2 – Explaining the Grammar of Graphics</a></li>
   </ul>
 </nav>
     </div>
@@ -197,12 +195,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <section id="welcome-to-my-website." class="level1" data-number="1">
 <h1 data-number="1"><span class="header-section-number">1</span> Welcome to my Website.</h1>
-<section id="introduction" class="level2" data-number="1.1">
-<h2 data-number="1.1" class="anchored" data-anchor-id="introduction"><span class="header-section-number">1.1</span> Introduction</h2>
+</section>
+<section id="introduction" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> Introduction</h1>
 <p>Data visualisation is an important skill for any data professional. It is important to understand the difference between a graph and a graphic before planning any visuals. A graph is a mathematical representation of a set of points and their relationships. A graphic is its perceivable representation. This website demonstrates key concepts of the Grammar of Graphics and Object-Oriented Design, providing examples and explaining why these concepts are important (Navarro, 2020).</p>
 </section>
-<section id="task-1---planning-a-graphic" class="level2" data-number="1.2">
-<h2 data-number="1.2" class="anchored" data-anchor-id="task-1---planning-a-graphic"><span class="header-section-number">1.2</span> Task 1 - Planning a Graphic</h2>
+<section id="task-1---planning-a-graphic" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> Task 1 - Planning a Graphic</h1>
 <p>Before writing any code, it’s essential to plan exactly what the final graphic should look like and how it will communicate the data. This structured plan is referred to as a Specification (SPEC). The core idea is to separate the design (the SPEC) from the execution (the R code).</p>
 <p><strong>Why is separating specification from execution important?</strong></p>
 <p>This separation is key to reproducibility and flexibility. If I write a clear SPEC, anyone—myself in five years, another student, or even someone using Python’s plotnine (a Grammar of Graphics implementation)—can reproduce the same visual. <strong>The SPEC describes the what, while the code describes the how.</strong></p>
@@ -304,8 +303,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </section>
-<section id="task-2-explaining-the-grammar-of-graphics" class="level2" data-number="1.3">
-<h2 data-number="1.3" class="anchored" data-anchor-id="task-2-explaining-the-grammar-of-graphics"><span class="header-section-number">1.3</span> Task 2 – Explaining the Grammar of Graphics</h2>
+<section id="task-2-explaining-the-grammar-of-graphics" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> Task 2 – Explaining the Grammar of Graphics</h1>
 <p>The <strong>Grammar of Graphics</strong> is a foundational set of rules for constructing systematic and reproducible visualisations in R, primarily through the ggplot2 library. Much like the syntax of a spoken language—where a specific order of subject, verb, and object ensures clarity—this framework requires that each component of a graphic be declared in a logical sequence to produce the intended output.</p>
 <p><strong>Data and Aesthetics (aes()):</strong> The process begins with the raw data, followed by the declaration of aesthetics. Aesthetics serve as the guidelines for mapping variables to the graph, such as x and y coordinates, colors, and shapes. Crucially, aes() does not render the graph itself; it merely defines the mapping between data and visual properties. E.g. aes(x = weight, y = height, color = “Green”)</p>
 <p><strong>Scales and Transformations:</strong> These determine how data values are mapped to the visual space. While an IDE may provide default scaling, manual manipulation of scales is essential for telling complex stories and ensuring the data is positioned accurately. For example, using log_10 to handle skewed data, such as scale_y_log10() or scale_color_discrete() (Navarro, 2020).</p>
@@ -478,7 +477,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->

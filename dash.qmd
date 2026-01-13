@@ -4,7 +4,7 @@ subtitle: "Data visualisation"
 author: "RP Wadhwa"
 format: dashboard
 logo: images/uni_logo.jpeg
-nav-buttons: [linkedin, github]
+nav-buttons: [linkedin , github]
 execute:
   echo: false
   warning: false

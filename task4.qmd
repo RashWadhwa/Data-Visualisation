@@ -8,7 +8,8 @@ toc-depth: 3
 theme: cosmo
 ---
 
-# Task4 – Animation and Reflection with gganimate
+# Task4
+# Animation and Reflection with gganimate
 
 Below is the animated visualisation of the UK's development trajectory, highlighting the impact 
 of the 2020 COVID-19 pandemic.
@@ -79,9 +80,9 @@ anim_save(
 )
 ```
 
-Reflective Commentary
+**Reflective Commentary**
 
-# The Value of Animation in Data Storytelling (Holtz, 2018)
+# The Value of Animation in Data Storytelling 
 
 I see that animation brings a whole new time element to the table that something static graphs just can't do. For my data project, using the {gganimate} package allows me to actually watch the journey of global development unfold, rather than just seeing where things ended up. It's like seeing the whole movie instead of a single photo. While a static scatter plot shows a snapshot of where countries stand in a single year, an animation reveals the **velocity and direction** of change, making the data feel like a lived history rather than a set of coordinates (Holtz, 2018).
 
@@ -95,7 +96,7 @@ The "personal twist" in this animation is the inclusion of the 2020 COVID-19 imp
 
 -   **Perception of Impact:** Since the audience has just witnessed 70 years of steady progress, the sudden decline in life expectancy and GDP per capita carries more emotional and analytical weight. It transforms a statistic into a visible "shock" to the system.
 
-### Grammar of Graphics Reflection
+## Grammar of Graphics Reflection
 
 From a technical standpoint, this animation relies on **Aesthetic Mapping** over time. By mapping year to the transition_reveal() function, we tell the Grammar of Graphics to treat the time variable as the "sequencer" for the visual frames. This reinforces the idea that an animation is not a different type of plot, but simply a plot where one aesthetic (time) is rendered across multiple frames instead of on a single axis.
 
