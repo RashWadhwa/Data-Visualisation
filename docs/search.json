@@ -28,6 +28,13 @@
     "text": "2.2 Grammar of Graphics Reflection\nFrom a technical standpoint, this animation relies on Aesthetic Mapping over time. By mapping year to the transition_reveal() function, we tell the Grammar of Graphics to treat the time variable as the “sequencer” for the visual frames. This reinforces the idea that an animation is not a different type of plot, but simply a plot where one aesthetic (time) is rendered across multiple frames instead of on a single axis."
   },
   {
+    "objectID": "task4.html#reference-list",
+    "href": "task4.html#reference-list",
+    "title": "Animation",
+    "section": "2.3 Reference list",
+    "text": "2.3 Reference list\nArnold, J.B. (in print). 3 Data visualisation | R for Data Science: Exercise Solutions. [online] jrnold.github.io. Available at: https://jrnold.github.io/r4ds-exercise-solutions/data-visualisation.html [Accessed 30 Nov. 2023]. Hadley Wickham (2019). 8 Annotations | ggplot2: Elegant Graphics for Data Analysis. [online] Ggplot2-book.org. Available at: https://ggplot2-book.org/annotations.html [Accessed 29 Nov. 2019]. Holtz, Y. (2018). Animate Your Plots with gganimate. [online] R-graph-gallery.com. Available at: https://r-graph-gallery.com/package/gganimate.html. Navarro, D. (2020). ggplot2: Elegant Graphics for Data Analysis (3e) - 14 Scales and guides. [online] Ggplot2-book.org. Available at: https://ggplot2-book.org/scales-guides.html [Accessed 23 Nov. 2024]. Navarro, D. (2025). 17 Themes – ggplot2: Elegant Graphics for Data Analysis (3e). [online] Ggplot2-book.org. Available at: https://ggplot2-book.org/themes.html [Accessed 2 May 2025]. Shahzad, M., Tah, J.H.M., Younas, M. and Almukhtar, A. (2025). Technologies and Techniques in Digital Twins for Real-time Data Visualisation in Building Maintenance: A State-of-the-Art Review. Journal of Infrastructure Intelligence and Resilience, (4), p.100185. doi:https://doi.org/10.1016/j.iintel.2025.100185. YI, M. (2025). Mastering Scatter Plots: Visualise Data Correlations. [online] Atlassian. Available at: https://www.atlassian.com/data/charts/what-is-a-scatter-plot. Yi, M. (2025). A Complete Guide to Box Plots. [online] Atlassian. Available at: https://www.atlassian.com/data/charts/box-plot-complete-guide."
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Homepage",
