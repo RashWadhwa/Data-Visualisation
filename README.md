@@ -10,6 +10,8 @@ The project is hosted live via GitHub Pages. You can explore the full interactiv
 
 🔗 View Live Portfolio Site
 
+![Click here]()
+
 ## **How to Navigate the Site:**
 
 **Sidebar/Navigation Bar:** Use the top or side menu to switch between different project modules (e.g., New York Air Quality, Global Development Animation, or the Campus Map).
@@ -19,15 +21,20 @@ The project is hosted live via GitHub Pages. You can explore the full interactiv
 **Code Visibility:** Most pages include a "Code" toggle button at the top right, allowing you to view the underlying R code used to generate the visualisations.
 
 ## **Project Highlights**
-Include screenshots here to showcase your best work. For the best layout, place them under their respective milestone descriptions.
+
+![Click here]()
 
 ## **Milestone: Static Complexity (ggplot2)**
+
 A faceted grid exploring the correlation between temperature, wind speed, and Ozone levels in New York.
 
+![Click here]()
+
 ## **Milestone: Dynamic Storytelling (gganimate)**
+
 An animated time series illustrating the shift in global health metrics, with a focus on the 2020 pandemic anomaly.
 
-Tip: To include screenshots effectively, create an assets/screenshots folder in your repository and use the Markdown syntax: ![Alt Text](./path/to/image.png).
+![Animation](https://github.com/RashWadhwa/Data-Visualisation/blob/main/videos/gapminder_uk_covid_reflection.gif).
 
 ## **What I Achieved**
 
