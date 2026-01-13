@@ -21,10 +21,14 @@ The project is hosted live via GitHub Pages. You can explore the full interactiv
 **Code Visibility:** Most pages include a "Code" toggle button at the top right, allowing you to view the underlying R code used to generate the visualisations.
 
 ## **Project Highlights**
-Include screenshots here to showcase your best work. For the best layout, place them under their respective milestone descriptions.
+
+![Click here]()
 
 ## **Milestone: Static Complexity (ggplot2)**
+
 A faceted grid exploring the correlation between temperature, wind speed, and Ozone levels in New York.
+
+![Click here]()
 
 ## **Milestone: Dynamic Storytelling (gganimate)**
 
