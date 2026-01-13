@@ -10,11 +10,11 @@ theme: cosmo
 
 # Welcome to my Website.
 
-## Introduction
+# Introduction
 
 Data visualisation is an important skill for any data professional. It is important to understand the difference between a graph and a graphic before planning any visuals. A graph is a mathematical representation of a set of points and their relationships. A graphic is its perceivable representation. This website demonstrates key concepts of the Grammar of Graphics and Object-Oriented Design, providing examples and explaining why these concepts are important (Navarro, 2020).
 
-## Task 1 - Planning a Graphic
+# Task 1 - Planning a Graphic
 
 Before writing any code, it's essential to plan exactly what the final graphic should look like and how it will communicate the data. This structured plan is referred to as a Specification (SPEC). The core idea is to separate the design (the SPEC) from the execution (the R code).
 
@@ -68,7 +68,7 @@ ggplot(data = mpg,
   theme_minimal()   
 ```
 
-## Task 2 – Explaining the Grammar of Graphics
+# Task 2 – Explaining the Grammar of Graphics
 
 The **Grammar of Graphics** is a foundational set of rules for constructing systematic and reproducible visualisations in R, primarily through the ggplot2 library. Much like the syntax of a spoken language—where a specific order of subject, verb, and object ensures clarity—this framework requires that each component of a graphic be declared in a logical sequence to produce the intended output.
 
