@@ -10,7 +10,7 @@ The project is hosted live via GitHub Pages. You can explore the full interactiv
 
 🔗 View Live Portfolio Site
 
-![Link to GitHub Pages](https://rashwadhwa.github.io/Data-Visualisation/)
+[Link to GitHub Pages](https://rashwadhwa.github.io/Data-Visualisation/)
 
 ## **How to Navigate the Site:**
 
