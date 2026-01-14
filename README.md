@@ -10,7 +10,7 @@ The project is hosted live via GitHub Pages. You can explore the full interactiv
 
 🔗 View Live Portfolio Site
 
-![Click here]()
+![Link to GitHub Pages](https://rashwadhwa.github.io/Data-Visualisation/)
 
 ## **How to Navigate the Site:**
 
@@ -22,13 +22,23 @@ The project is hosted live via GitHub Pages. You can explore the full interactiv
 
 ## **Project Highlights**
 
-![Click here]()
+![Dashboard](https://github.com/RashWadhwa/Data-Visualisation/blob/main/images/Pages%20DB%20image.png)
+
+![Campus](https://github.com/RashWadhwa/Data-Visualisation/blob/main/images/Campus%20location.png)
+
+## **A few of the visuals showing on the website that you can run yourself by pressing the play button**
+
+![Box & Violin chart](https://github.com/RashWadhwa/Data-Visualisation/blob/main/images/Violin%20plot.png)
+
+![Density Example](https://github.com/RashWadhwa/Data-Visualisation/blob/main/images/Density%20plot.png)
+
+![Scatter plot](https://github.com/RashWadhwa/Data-Visualisation/blob/main/images/Scatter%20plot.png)
 
 ## **Milestone: Static Complexity (ggplot2)**
 
 A faceted grid exploring the correlation between temperature, wind speed, and Ozone levels in New York.
 
-![Click here]()
+![Click here](https://github.com/RashWadhwa/Data-Visualisation/blob/main/images/NY%20Ozone%20Levels.png)
 
 ## **Milestone: Dynamic Storytelling (gganimate)**
 
