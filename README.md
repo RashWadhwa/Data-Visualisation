@@ -12,6 +12,10 @@ The project is hosted live via GitHub Pages. You can explore the full interactiv
 
 [Link to GitHub Pages](https://rashwadhwa.github.io/Data-Visualisation/)
 
+🔗 Live site on Netlify:
+
+[View live on Netlify](https://genuine-duckanoo-d1f011.netlify.app)
+
 ## **How to Navigate the Site:**
 
 **Sidebar/Navigation Bar:** Use the top or side menu to switch between different project modules (e.g., New York Air Quality, Global Development Animation, or the Campus Map).
