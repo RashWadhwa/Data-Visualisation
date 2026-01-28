@@ -1,10 +1,14 @@
 # **Data Visualisation Portfolio**
 
-# **Project Overview**
+**Student Name:** Rash Paul Wadhwa **Student ID:** 25208400
+
+---
+
+## **Project Overview**
 
 This portfolio serves as a comprehensive learning resource for modern data visualisation using the Grammar of Graphics framework in R. By moving from theoretical specifications to complex static charts and dynamic animations, this project demonstrates how design principles translate into reproducible insights.
 
-## **Navigation & Access**
+### **Navigation & Access**
 
 The project is hosted live via GitHub Pages. You can explore the full interactive dashboard and visualisations by visiting the link below:
 
@@ -16,7 +20,9 @@ The project is hosted live via GitHub Pages. You can explore the full interactiv
 
 [View live on Netlify](https://genuine-duckanoo-d1f011.netlify.app)
 
-## **How to Navigate the Site:**
+---
+
+### **How to Navigate the Site:**
 
 **Sidebar/Navigation Bar:** Use the top or side menu to switch between different project modules (e.g., New York Air Quality, Global Development Animation, or the Campus Map).
 
@@ -24,13 +30,13 @@ The project is hosted live via GitHub Pages. You can explore the full interactiv
 
 **Code Visibility:** Most pages include a "Code" toggle button at the top right, allowing you to view the underlying R code used to generate the visualisations.
 
-## **Project Highlights**
+### **Project Highlights**
 
 ![Dashboard](https://github.com/RashWadhwa/Data-Visualisation/blob/main/images/Pages%20DB%20image.png)
 
 ![Campus](https://github.com/RashWadhwa/Data-Visualisation/blob/main/images/Campus%20location.png)
 
-## **A few of the visuals showing on the website that you can run yourself by pressing the play button**
+### **A few of the visuals showing on the website that you can run yourself by pressing the play button**
 
 ![Box & Violin chart](https://github.com/RashWadhwa/Data-Visualisation/blob/main/images/Violin%20plot.png)
 
@@ -38,19 +44,19 @@ The project is hosted live via GitHub Pages. You can explore the full interactiv
 
 ![Scatter plot](https://github.com/RashWadhwa/Data-Visualisation/blob/main/images/Scatter%20plot.png)
 
-## **Milestone: Static Complexity (ggplot2)**
+### **Milestone: Static Complexity (ggplot2)**
 
 A faceted grid exploring the correlation between temperature, wind speed, and Ozone levels in New York.
 
 ![Click here](https://github.com/RashWadhwa/Data-Visualisation/blob/main/images/NY%20Ozone%20Levels.png)
 
-## **Milestone: Dynamic Storytelling (gganimate)**
+### **Milestone: Dynamic Storytelling (gganimate)**
 
 An animated time series illustrating the shift in global health metrics, with a focus on the 2020 pandemic anomaly.
 
 ![Animation](https://github.com/RashWadhwa/Data-Visualisation/blob/main/videos/gapminder_uk_covid_reflection.gif).
 
-## **What I Achieved**
+### **What I Achieved**
 
 This project represents a significant transition from a "chart-maker" to a "data storyteller." Through this portfolio, I have mastered:
 
@@ -62,7 +68,7 @@ This project represents a significant transition from a "chart-maker" to a "data
 
 **Critical Data Analysis:** Beyond the code, I learned to identify and explain complex real-world events (like the COVID-19 impact) through data, turning raw numbers into compelling narratives.
 
-## **Learning Milestones:**
+### **Learning Milestones:**
 
 - **The SPEC (Planning):** Establishing a structured specification (Aesthetics, Geometries, Scales) to ensure that any graphic produced is reproducible across different software environments.
 
